@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<!--
+		Name:					Sean Glover
+		Class:					CIS 114 - JavaScript/jQuery
+		Assignment:	Lesson 01 - sum.html
+		Due: 						4/10/13
+	-->
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />	
+	<title>Sum the Numbers</title>
+	
+	<script type="text/javascript" language="javascript">
+	
+	//	<![CDATA[  
+
+		var user_number;// = prompt("Enter top number to sum", "5");
+		//user_number = parseInt(user_number);
+			
+		// loop to validate number entered by user is valid
+		do {
+			// initialize user_number variable from prompt
+			user_number = prompt("Enter top number to sum", 5);
+			user_number = parseInt(user_number);
+			
+			if (user_number > 0 && user_number <= 100) {
+				break // break from loop when entry is valid
+			} else {
+				// alert user number entry is not valid
+				alert("That is not an valid entry!");
+			}
+		} while (true)
+		
+		var sum = 0;
+		
+		// loop to sum numbers 1 through user entry
+		for (i = 1; i <= user_number; i++) {
+			sum = sum + i;
+		}
+		
+		alert("Sum of the numbers from 1 through " + user_number + " is " + sum + ".");
+			
+	//	]]>
+	</script>
+</head>
+
+<body>
+   <h1>This page is displayed after the JavaScript is executed</h1>
+</body>
+</html>
